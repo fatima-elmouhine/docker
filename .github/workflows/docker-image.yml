@@ -16,12 +16,6 @@ jobs:
       packages: write
 
     steps:
+      - uses: actions/checkout@v2
       - name: Checkout repository
-        uses: actions/checkout@v2
-        
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          file: ./docker/Dockerfile
-          tags: ghcr.io/fatima-elmouhine/fatima-elmouhine-docker:1.0.0
+        run: docker build -t ghcr.io/fatima-elmouhine/fatima-elmouhine-docker:1.0.0 . --file Dockerfile --tag ghcr.io/fatima-elmouhine/fatima-elmouhine-docker:1.0.0
