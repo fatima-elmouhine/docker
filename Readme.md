@@ -15,7 +15,8 @@ Pour cela j'ai :
 - J'ai partagé l'image : <b>docker push ghcr.io/fatima-elmouhine/fatima-elmouhine-docker:1.0.0 </b>
 
 # Pour acceder à mon image docker
--  il faut pull docker pull ghcr.io/fatima-elmouhine/fatima-elmouhine-docker:1.0.0 sur un terminal (⚠️ vérifier que Docker Desktop est bien lancé)
--  Puis sur Docker Desktop, dans l'onglet image, on peut run notre image et rentrer les informations de notre conteneur
+-  il faut pull l'image : <b> docker pull ghcr.io/fatima-elmouhine/fatima-elmouhine-docker:1.0.0 </b> sur un terminal (⚠️ vérifier que Docker Desktop est bien lancé)
+-  Puis sur Docker Desktop, dans l'onglet image, on peut run notre image et rentrer les informations de notre conteneur (voir image ci-dessous)
+-  Puis sur votre navigateur, tapez votre adresseIP/deprecated.php (par exemple : http://10.10.4.176/deprecated.php)
 
 ![image](https://github.com/fatima-elmouhine/docker/assets/91740491/6b8b806a-7b34-48b1-98a0-b22c8922aefc)
