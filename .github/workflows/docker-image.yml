@@ -22,7 +22,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: docker
           push: true
           file: ./docker/Dockerfile
           tags: ghcr.io/fatima-elmouhine/fatima-elmouhine-docker:1.0.0
