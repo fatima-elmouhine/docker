@@ -1,0 +1,28 @@
+name: fatima-elmouhine
+
+on:
+  push:
+    branches: ['main']
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: ./docker
+          push: true
+          file: ./docker/Dockerfile
+          tags: ghcr.io/fatima-elmouhine/fatima-elmouhine-docker:1.0.0
