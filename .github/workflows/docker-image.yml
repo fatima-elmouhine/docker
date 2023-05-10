@@ -19,7 +19,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Checkout repository
         run: docker build -t ghcr.io/fatima-elmouhine/fatima-elmouhine-docker:1.0.0 . --file Dockerfile --tag ghcr.io/fatima-elmouhine/fatima-elmouhine-docker:1.0.0
-      - name : Show ip conteneur
-        run: docker container inspect fatima-elmouhine| grep "IPAddress"  
       - name: Run container
         run: docker run -p 80:80 ghcr.io/fatima-elmouhine/fatima-elmouhine-docker:1.0.0
